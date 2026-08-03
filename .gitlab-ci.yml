@@ -1,0 +1,8 @@
+stages:
+  - test
+
+run-tests:
+  stage: test
+  image: registry.aislab.ee.ncku.edu.tw/aislab-internal/course/summer-training/summer-training-2026/lab2-submission/pypractice-vic:latest
+  script:
+    - make test
