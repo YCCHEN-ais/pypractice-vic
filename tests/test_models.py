@@ -5,7 +5,8 @@ from src.banknote_classifier.models import BanknoteClassifierVGG
 def test_vgg16_instantiation():
     """VGG16 應能成功建立，且為 torch.nn.Module 的子類別"""
     model = BanknoteClassifierVGG()
-    assert isinstance(model, torch.nn.Module)
+    # 故意改錯：模型不可能為 int 類別，測試將在此處失敗
+    assert isinstance(model, int)
 
 
 def test_vgg16_output_shape():
